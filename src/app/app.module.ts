@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { ChatNavbar } from './components/ChatNavBar';
 import { ChatThread, ChatThreads } from './components/ChatThread';
 import { ChatMessage, ChatWindow } from './components/ChatWindow';
-
+ 
+import { servicesInjectables } from './services/services';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { ChatMessage, ChatWindow } from './components/ChatWindow';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ servicesInjectables ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
